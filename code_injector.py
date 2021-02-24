@@ -56,13 +56,16 @@ def process_packet(packet):
             pass
     packet.accept()
 
+# ====================================================================================================
 
-queue = netfilterqueue.NetfilterQueue()
-queue.bind(0, process_packet)
+if __name__ == "__main__":
 
-try:
-    while True:
-        queue.run()
-except KeyboardInterrupt:
-    print("\n[-] Keyboard Interrupt detected. Exiting program")
+    queue = netfilterqueue.NetfilterQueue()
+    queue.bind(0, process_packet)
+
+    try:
+        while True:
+            queue.run()
+    except KeyboardInterrupt:
+        print("\n[-] Keyboard Interrupt detected. Exiting program")
 

