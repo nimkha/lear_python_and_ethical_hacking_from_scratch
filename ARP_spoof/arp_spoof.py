@@ -1,4 +1,4 @@
-#!/usr/bin/env python
+#!/usr/bin/python
 
 # This  script makes it possible to change the target mac address of your victim to your own choosing
 

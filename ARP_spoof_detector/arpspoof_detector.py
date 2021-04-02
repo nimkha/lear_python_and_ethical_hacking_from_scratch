@@ -1,4 +1,4 @@
-#!/usr/bin/env python
+#!/usr/bin/python
 
 import scapy.all as scapy
 import scapy_http.http as http
