@@ -62,5 +62,7 @@ class Listener:
             print(result)
 
 
-my_listener = Listener("10.0.2.15", 4444)
+print("[+] Please enter source-ip and port")
+args = [input("Enter source-ip: "), input("Enter port number: ")]
+my_listener = Listener(args[0], int(args[1]))
 my_listener.run()
