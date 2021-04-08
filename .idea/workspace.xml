@@ -6,7 +6,8 @@
   <component name="ChangeListManager">
     <list default="true" id="d6d24e4c-1da1-4b5b-86a6-88edf74160cc" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Reverse_backdoor/backdoor.py" beforeDir="false" afterPath="$PROJECT_DIR$/Reverse_backdoor/backdoor.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Reverse_backdoor/flower2.jpg" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Reverse_backdoor/listener.py" beforeDir="false" afterPath="$PROJECT_DIR$/Reverse_backdoor/listener.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />

