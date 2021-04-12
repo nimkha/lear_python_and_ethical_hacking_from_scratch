@@ -6,9 +6,10 @@
   <component name="ChangeListManager">
     <list default="true" id="d6d24e4c-1da1-4b5b-86a6-88edf74160cc" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Reverse_backdoor/backdoor.py" beforeDir="false" afterPath="$PROJECT_DIR$/Reverse_backdoor/backdoor.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Reverse_backdoor/flower2.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Execute_command/execute_command.py" beforeDir="false" afterPath="$PROJECT_DIR$/Execute_command/execute_command.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Keylogger/keylogger.py" beforeDir="false" afterPath="$PROJECT_DIR$/Keylogger/keylogger.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Reverse_backdoor/listener.py" beforeDir="false" afterPath="$PROJECT_DIR$/Reverse_backdoor/listener.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/__init__.py" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

