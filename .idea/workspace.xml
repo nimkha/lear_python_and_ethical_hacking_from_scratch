@@ -6,9 +6,10 @@
   <component name="ChangeListManager">
     <list default="true" id="d6d24e4c-1da1-4b5b-86a6-88edf74160cc" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Keylogger/keylogger.py" beforeDir="false" afterPath="$PROJECT_DIR$/Keylogger/keylogger.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Keylogger/nlogger.py" beforeDir="false" afterPath="$PROJECT_DIR$/Keylogger/nlogger.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/command_cheatsheet.txt" beforeDir="false" afterPath="$PROJECT_DIR$/command_cheatsheet.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Download_execute_and_report/download_execute_and_report.py" beforeDir="false" afterPath="$PROJECT_DIR$/Download_execute_and_report/download_execute_and_report.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Keylogger/build/nlogger/EXE-00.toc" beforeDir="false" afterPath="$PROJECT_DIR$/Keylogger/build/nlogger/EXE-00.toc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Reverse_backdoor/backdoor.py" beforeDir="false" afterPath="$PROJECT_DIR$/Reverse_backdoor/backdoor.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/command_cheatsheet.txt" beforeDir="false" afterPath="$PROJECT_DIR$/command_cheatsheet.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -38,7 +39,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/Keylogger" />
-    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
+    <property name="settings.editor.selected.configurable" value="editor.preferences.fonts.default" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">

