@@ -6,10 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="d6d24e4c-1da1-4b5b-86a6-88edf74160cc" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Download_execute_and_report/download_execute_and_report.py" beforeDir="false" afterPath="$PROJECT_DIR$/Download_execute_and_report/download_execute_and_report.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Keylogger/build/nlogger/EXE-00.toc" beforeDir="false" afterPath="$PROJECT_DIR$/Keylogger/build/nlogger/EXE-00.toc" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Reverse_backdoor/backdoor.py" beforeDir="false" afterPath="$PROJECT_DIR$/Reverse_backdoor/backdoor.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/command_cheatsheet.txt" beforeDir="false" afterPath="$PROJECT_DIR$/command_cheatsheet.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Download_and_execute/download_and_execute.py" beforeDir="false" afterPath="$PROJECT_DIR$/Download_and_execute/download_and_execute.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
